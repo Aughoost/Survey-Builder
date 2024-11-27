@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "chart.js": "^4.4.6",
+    "core-js": "^3.39.0",
+    "formBuilder": "^3.19.12",
+    "sweetalert2": "^11.14.5"
+  }
+}
