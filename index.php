@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 <?php 
 
@@ -32,7 +31,7 @@ ob_end_flush();
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
+      <i class='bxl-c-plus-plus fa fa-child icon'></i>
         <div class="logo_name">Survey Lab</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
