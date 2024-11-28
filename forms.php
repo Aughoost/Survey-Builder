@@ -1,7 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="node_modules\jquery-ui-sortable\jquery-ui.min.js"></script>
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
 <div class="container">
     <div class="pt-3">
     <h3 >Form List</h3>
@@ -48,9 +49,20 @@
         $('.rem_form').click(function(){
             start_loader();
             console.log($(this).attr('data-id'))
-            var _conf = confirm("Are you sure to delete this data?")
-            if(_conf == true){
-                $.ajax({
+            // var _conf = confirm("Are you sure to delete this data?")
+
+            var _conf =   Swal.fire({
+  title: "Do you want to save the changes?",
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: "Delete",
+  denyButtonText: `Don't Delete`
+}).then((result) => 
+{
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+
+    $.ajax({
                     url:'classes/Forms.php?a=delete_form',
                     method:'POST',
                     data:{form_code: $(this).attr('data-id')},
@@ -62,15 +74,26 @@
                     },
                     success:function(resp){
                         if(resp.status == 'success'){
-                            alert("Data successfully deleted");
-                            location.reload()
+                            Swal.fire({
+                    icon: "success",
+                    text: 'Deleted Successfully',
+                    type: 'success',
+                    showConfirmButton: false,
+                    timer: 1000,
+                }).then(function () {
+                    window.location.href = "./";
+                })
+
                         }else{
                             console.log(resp)
                         alert("an error occured")
                         }
                     }
                 })
-            }
+  } else if (result.isDenied) {
+    Swal.fire("Survey isn't Deleted", "", "info");
+  }
+});
             end_loader()
         })
     })
