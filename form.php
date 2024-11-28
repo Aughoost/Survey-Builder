@@ -1,5 +1,4 @@
 <?php
-
 ob_start();
 require_once('./classes/DBConnection.php');
 $db = new DBConnection();
@@ -13,9 +12,6 @@ ob_end_flush();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
     <script src="node_modules\jquery\dist\jquery.min.js"></script>
     <script src="node_modules\formBuilder\dist\form-builder.min.js"></script>
@@ -27,133 +23,13 @@ ob_end_flush();
         <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
+        <link rel="stylesheet" href="classes\GoogleForms.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Form Builder</title>
-
     <script>
         var form_code = "<?php echo $code ?>";
     </script>
-
-
-<style>
-    table th,
-    table td {
-        padding: 3px !important
-    }
-
-    .FormHeader {
-  height: 278px;
-}
-.FormContent1 {
-  color: rgba(0,0,0,.87);
-  padding: 20px 35px
-}
-
-.FormContentWrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-flex-direction: column;
-  flex-direction: column
-}
-
-.ctrlqAccent {
-  background-color: #673bb7;
-  height: 8px;
-}
-.FormContent {
-  margin: auto;
-  width: 600px; 
-}
-.FormCard {
-  background-color: #fff;
-  margin-bottom: 48px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-  word-wrap: break-word
-}
-
-.FormCard:first-of-type {
-  margin-top: -100px
-}
-
-.ctrlqHeaderTitle {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 34px;
-  line-height: 135%;
-  max-width: 100%;
-  min-width: 0%;
-  margin-bottom: 22px
-}
-
-@media (max-width: 660px) {
-  .FormHeader {
-    height: 122px;
-  }
-  .FormCard:first-of-type {
-    margin-top: -50px;
-  }
-
-  .FormContent {
-    width: 90%;
-  }
-}
-
-div.error {
-  position: relative;
-  top: -1rem;
-  left: 0rem;
-  font-size: 0.8rem;
-  color: #FF4081;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
-}
-
-input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after{
- background-color: #673bb7;
-}
-
-input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
-border: 2px solid #673bb7;
-}
-
-input[type=text]:not(.browser-default):focus:not([readonly]) {
-    border-bottom: 1px solid #673bb7;
-    /* box-shadow: 0 0 0 0 var(#673bb7); */
-}
-
-
-input[type="checkbox"]:checked + span:not(.lever)::before{
-    border:2px solid transparent;
-    border-bottom:2px solid #006AB5;
-    border-right:2px solid #006AB5;
-    background:transparent;
-}
-.checkbox[type="checkbox"]:checked + span:not(.checkbox)::after {
-    border: 2px solid transparent;
-    background-color: var(--color-primary);
-}
-[type="checkbox"]:checked+label:before {
-    top: -4px;
-    left: -5px;
-    width: 12px;
-    height: 22px;
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-right: 2px solid #673bb7;
-    border-bottom: 2px solid #673bb7;
-}
-</style>
-
-
 </head>
 
 <body style="  background-color: #f0ebf8;">
@@ -164,18 +40,9 @@ input[type="checkbox"]:checked + span:not(.lever)::before{
         <div class="FormCard">
           <div class="ctrlqAccent"></div>
           <div class="FormContent1">
+     
           <form id="fb-render" class="fb-render">
-    </form>
-
-   
-                <div class="input-field col s12">
-                  <label for="name" class="">Your Name</label>
-                  <input id="name" name="name" type="text" class="validate" data-error="#e1" required="" aria-required="true">
-                  <div id="e1"></div>
-                </div>
-          
-
-    <!-- <input id="name" name="name" type="text" class="validate" data-error="#e1" required> -->
+          </form>
          <div class="w-100 d-flex justify-content-center">
             <button class="btn btn-primary" style="background-color:#673bb7"form="form-data" id="get-user-data">Sumbit</button>
         </div>
@@ -195,15 +62,6 @@ input[type="checkbox"]:checked + span:not(.lever)::before{
     // const formbuilderDivClass = document.getElementByClassName("formbuilder-text")[0];
     var currentpage = `<?php include "./forms/" . $code . ".xml" ?>`;
     var Required = true;
-
-    // for(let i=0; i<fbRender.childNodes.length; i++){
-    //     formbuilderDivClass.childNodes[i].className="input-field";
-    // }
-
-  
-
-
-   
     getUserDataBtn.addEventListener("click", getData);
     function getData() {
         for(var i=0; i < fbRender.elements.length; i++){
