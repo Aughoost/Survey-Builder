@@ -32,7 +32,7 @@ ob_end_flush();
   <div class="sidebar">
     <div class="logo-details">
       <i class='bxl-c-plus-plus fa fa-child icon'></i>
-        <div class="logo_name">Survey Lab</div>
+               <div class="logo_name">Survey Maker</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
