@@ -153,7 +153,6 @@ var newArray = [];
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="Cart\styles.css">
-   <title>Displaying JSON data in Chart.js</title>
 </head>
 <body>
  

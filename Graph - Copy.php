@@ -150,7 +150,6 @@ var newArray = [];
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="Cart\styles.css">
    <script src="http://neue.cc/linq.min.js"></script>
-   <title>Displaying JSON data in Chart.js</title>
 </head>
 <body>
   <canvas id="NewChart"></canvas>

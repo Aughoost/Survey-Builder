@@ -150,7 +150,6 @@ var newArray = [];
    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-   <title>Displaying JSON data in Chart.js</title>
 </head>
 <body>
     <!-- <h1 style="font-size:4rem;">Test</h1> -->

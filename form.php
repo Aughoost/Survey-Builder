@@ -26,7 +26,6 @@ ob_end_flush();
         <link rel="stylesheet" href="classes\GoogleForms.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Form Builder</title>
     <script>
         var form_code = "<?php echo $code ?>";
     </script>

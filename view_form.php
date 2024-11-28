@@ -51,7 +51,7 @@ jQuery(function($) {
     };
     let $renderContainer = $('<form/>');
     $renderContainer.formRender(formRenderOpts);
-    let html = `<!doctype html><title>Form Preview</title><body class="container"><h1>Preview</h1><hr>${$renderContainer.html()}</body></html>`;
+    let html = `<!doctype html><body class="container"><h1>Preview</h1><hr>${$renderContainer.html()}</body></html>`;
     var formPreviewWindow = window.open('', 'formPreview', 'height=480,width=640,toolbar=no,scrollbars=yes');
 
     formPreviewWindow.document.write(html);

@@ -2,7 +2,6 @@
 <head>
   <!-- Required meta tag -->
   <meta charset="utf-8">
-  <title>Example formBuilder</title>
 </head>
 <body>
 <script src="node_modules\jquery\dist\jquery.min.js"></script>
@@ -145,122 +144,6 @@ var ClearFields = {
 
 
 
-
-
-
-// const fs = require('fs');
-
-//           jQuery(function($) {
-//             var options = {
-//               onSave: function(evt, formData) {
-//                 // This is the respected form's data
-// //                 console.log('MY DATA_________', formData)
-
-       
-// //                 const jsonData = JSON.stringify(formData)
-// //                 console.log(jsonData)
-
-
-// //                 const addLineBreaks = html => html.replace(new RegExp("><", "g"), ">\n<");
-
-// // const $markup = $("<div/>");
-// // $markup.formRender({ formData });
-// // const HtmlReady = addLineBreaks($markup.formRender("html"));
-
-// // console.log(HtmlReady)
-
-// // document.getElementById('save_form').addEventListener('click', function() {
-//     // alert(formBuilder.actions.getData('xml'));
-//     //   htmldata = formBuilder.actions.getData('xml');
-//     //   previewData = formBuilder.formData;
-//     //   let html = '<!doctype html><title>Form Preview</title><body class="container"><h1>Preview</h1><hr><pre>' + htmldata + '</pre></body></html>';
-
-//     //     var tt =  escapeHtml(htmldata);
-      
-//     //   console.log(tt);
-//     //   var formPreviewWindow = window.open('', 'formPreview', 'height=480,width=640,toolbar=no,scrollbars=yes');
-//     //   formPreviewWindow.document.write(tt);
- 
- 
- 
-// // });
-
-
-
-
-
-
-
-
-//         var new_el = $('<div>')
-//         var form_el = $('#form-field').clone()
-//         var form_code = $("[name='form_code']").length > 0 ? $("[name='form_code']").val() : "";
-//         var title = $('#form-title').text()
-//         var description = $('#form-description').text()
-//         form_el.find("[name='form_code']").remove()
-//         new_el.append(form_el)
-//         start_loader()
-//         $.ajax({
-//             url: "classes/Forms.php?a=save_form",
-//             method: 'POST',
-//             data: { form_data: HtmlReady, description: description, title: title, form_code: form_code },
-//             dataType: 'json',
-//             error: err => {
-//                 console.log(err)
-//                 alert("an error occured")
-//             },
-//             success: function(resp) {
-//                 if (typeof resp == 'object' && resp.status == 'success') {
-//                     alert("Form successfully saved")
-//                     location.href = "./"
-//                 } else {
-//                     console.log(resp)
-//                     alert("an error occured")
-//                 }
-//                 end_loader()
-//             }
-//         })
-
-    
-
-//               },
-//             };
-//             $(document.getElementsByClassName('build-wrap')).formBuilder(options); 
-//           });
-//         </script>
-
-
-<script>
-//     jQuery(function($) {
-//     function escapeHtml(text) {
-//   var map = {
-//     '&': '&amp;',
-//     '<': '&lt;',
-//     '>': '&gt;',
-//     '"': '&quot;',
-//     "'": '&#039;'
-//   };
-
-//   return text.replace(/[&<>"']/g, function(m) { return map[m]; });
-// }
-//   var fbEditor = document.getElementById('build-wrap');
-//   var formBuilder = $(fbEditor).formBuilder();
-//   document.getElementById('getXML').addEventListener('click', function() {
-//     alert(formBuilder.actions.getData('xml'));
-//       htmldata = formBuilder.actions.getData('xml');
-//       previewData = formBuilder.formData;
-//       let html = '<!doctype html><title>Form Preview</title><body class="container"><h1>Preview</h1><hr><pre>' + htmldata + '</pre></body></html>';
-
-//         var tt =  escapeHtml(htmldata);
-      
-//       console.log(tt);
-//       var formPreviewWindow = window.open('', 'formPreview', 'height=480,width=640,toolbar=no,scrollbars=yes');
-//       formPreviewWindow.document.write(tt);
-//   });
-
-// });
 </script>
-
-
 
 </html>
