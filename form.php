@@ -126,12 +126,6 @@ ob_end_flush();
     }
 
 
-    var name = jQuery.trim($(".fb-render .formbuilder-text .SampleClass").val());
-
-    var name = $("#txt").val();
-
-
-
 $(document).ready(function() {
     $('.fb-render .formbuilder-text .form-control').blur(function(){
     if( $(this).val().length != 0 ) {
